@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="estiloPortada" stylesheets="@../customizations.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanchezjp.interfaz.cliente.NuevoClienteController">
+   <children>
+      <BorderPane layoutX="23.0" layoutY="21.0" prefHeight="368.0" prefWidth="559.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbLabels" alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="141.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="lbNombre" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Nombre" />
+                        <Label fx:id="lbAp1" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Apellido 1" />
+                        <Label fx:id="lbAp2" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Apellido 2" />
+                        <Label fx:id="lbNif" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="NIF" />
+                        <Label fx:id="lbRSocial" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Razón Social" />
+                        <Label fx:id="lbDescuento" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Descuento (%)" />
+                     </children>
+                     <padding>
+                        <Insets right="2.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbTextFields" alignment="CENTER_LEFT" prefHeight="368.0" prefWidth="135.0" spacing="6.0">
+                     <children>
+                        <TextField fx:id="tfNombre" promptText="nombre" styleClass="textField" />
+                        <TextField fx:id="tfAp1" promptText="primer apellido" styleClass="textField" />
+                        <TextField fx:id="tfAp2" promptText="segundo apellido" styleClass="textField" />
+                        <TextField fx:id="tfNif" promptText="NIF /  NIE / DNI" styleClass="textField" />
+                        <TextField fx:id="tfRSocial" promptText="razón social" styleClass="textField" />
+                     </children>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" text="Cancelar" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarCliente" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" stylesheets="@../customizations.css" text="Guardar" />
+              </buttons>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+      <Label fx:id="lbError" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="433.0" layoutY="6.0" stylesheets="@../customizations.css" text="* NIF incorrecto" visible="false" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <styleClass>
+            <String fx:value="labelError" />
+            <String fx:value="responsivePane" />
+         </styleClass>
+      </Label>
+   </children>
+</AnchorPane>

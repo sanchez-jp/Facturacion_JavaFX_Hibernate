@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="BorderPane" fx:id="mainPane" prefHeight="631.0" prefWidth="928.0" styleClass="corpBackGround" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanchezjp.interfaz.MainController">
+    <stylesheets>
+        <URL value="@customizations.css" />
+    </stylesheets>
+   <children>
+      
+   </children>
+   <top>
+      <MenuBar fx:id="menuBar" focusTraversable="false" layoutX="226.0" styleClass="menuBar" stylesheets="@customizations.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Facturas">
+            <items>
+              <MenuItem fx:id="miNewFactura" mnemonicParsing="false" onAction="#goToNuevaFactura" text="Nueva Factura" />
+                  <MenuItem fx:id="miListFactura" mnemonicParsing="false" onAction="#goToListFacturas" text="Listado de Facturas" />
+                  <MenuItem fx:id="miPapeleraFactura" mnemonicParsing="false" onAction="#goToPapeleraFactura" text="Consultar Factura" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clientes">
+            <items>
+              <MenuItem fx:id="miNewCliente" mnemonicParsing="false" onAction="#goToNewCliente" text="Nueva Alta de Cliente" />
+                  <MenuItem fx:id="miListCliente" mnemonicParsing="false" onAction="#goToListCliente" text="Listado de Clientes" />
+                  <MenuItem fx:id="miPapeleraClientes" mnemonicParsing="false" onAction="#goToPapeleraClientes" text="Clientes obsoletos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Artículos">
+               <items>
+                  <MenuItem fx:id="miNewArticulo" mnemonicParsing="false" onAction="#goToNewArticulo" text="Nuevo Artículo" />
+                  <MenuItem fx:id="miListArticulo" mnemonicParsing="false" onAction="#goToListArticulo" text="Listado de Artículos" />
+                  <MenuItem fx:id="miArticulosEliminados" mnemonicParsing="false" onAction="#goToPapeleraArticulos" text="Artículos eliminados" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+              <MenuItem fx:id="miAboutApp" mnemonicParsing="false" onAction="#goToAboutApp" text="Sobre Administrador de Facturas" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

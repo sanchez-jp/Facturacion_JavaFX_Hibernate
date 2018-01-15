@@ -1,0 +1,269 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-dic-2017, 13:40:14
+    Author     : Juan Pedro Sánchez Álvarez (sanchezalvarezjp@gmail.com)
+*/
+
+.responsivePane{
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+}
+
+.estiloPortada{
+    -fx-background-image: url("resources/Portada.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-color: linear-gradient(#AED6F1,#2980B9);
+}
+
+.estiloTextoPortada{
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "Helvetica";   
+}
+
+.footerPortada{
+    -fx-text-fill: white;
+}
+
+.corpBackGround{
+    -fx-background-image: url("resources/Portada.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+}
+
+.menuBar{ /* Elementos del menuBar */
+    -fx-background-color: derive(#D35400,50%);   
+}
+
+.context-menu { /* Relleno de menuItem */
+    -fx-background-color: derive(#D35400,50%);
+}
+
+.menu-bar .label { /* Letras del menuBar */
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.green-bar{
+    -fx-accent: green;
+}
+
+.tipografiaForm{
+    -fx-font-size: 14.5pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: #F8C471;
+    
+}
+
+.tipografiaForm .text {
+    -fx-stroke:#D35400;
+    -fx-stroke-width: 0.5px;
+}
+
+.button_ok{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: derive(#D35400,50%);
+}
+
+.button_cancel{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+}
+
+.button_generic{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: derive(#D35400,50%);
+    -fx-font-size: 10pt;
+}
+
+.textField{
+    -fx-border-color: derive(#D35400,50%);
+    -fx-border-radius: 8 8 8 8;
+    -fx-background-radius: 8 8 8 8;
+}
+
+.camposBusqueda{
+    -fx-border-color: derive(#D35400,50%);
+    -fx-border-radius: 18 18 18 18;
+    -fx-background-radius: 18 18 18 18;
+    -fx-background-color: rgba(253, 254, 254, 0.4);
+    -fx-text-fill: white;
+}
+
+.spinner{
+    -fx-border-color: derive(#D35400,50%);
+}
+
+.labelError{
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #B03A2E;
+    -fx-font-size: 8pt;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(247, 220, 111, 0.5);
+    -fx-border-radius: 8 8 8 8;
+    -fx-background-radius: 8 8 8 8;
+}
+
+/* formato para las celdas del tableview */
+.table-cell {     
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font:13px "Segoe UI Bold"; 
+    -fx-font-weight: bold;
+    -fx-border-insets: 0;
+}
+
+/* color de fondo para cuando el raton este sobre la celda */
+.table-cell:hover {
+    -fx-background-color: derive(#D35400,50%);
+}
+
+/* color para filas vacias, 
+ aplicar el mismo color cuando el raton este sobre una celda de una fila vacia  */
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: transparent;
+}
+
+/* eliminar borde de celdas en las filas vacias */
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+/* color de una fila cuando en raton se encuentra sobre la misma  */
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: derive(#85C1E9,50%); /* Deriva azul*/
+}
+
+/* color de una fila seleccionada por el usuario */
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: derive(#3498DB,50%); /* Deriva azul oscuro */
+}
+
+/* centrar y cambiar color de los titulos de columnas */
+.table-view .column-header .label{
+    -fx-text-fill: whitesmoke;
+    -fx-alignment: CENTER;
+}
+
+.table-view{
+    -fx-background-color: rgba(253, 254, 254, 0.15);
+    -fx-border-radius: 8 8 8 8;
+    -fx-background-radius: 8 8 8 8;
+}
+
+/* color de fondo del titulo de columna cuando en roton esta sobre ella */
+.table-view .column-header {
+    -fx-background-color: derive(#D35400,50%);
+}
+
+.table-row-cell{
+    -fx-background-color: rgba(253, 254, 254, 0.15);
+}
+
+.barraBusqueda{
+    -fx-background-color: rgba(230, 126, 34, 0.5);
+    -fx-border-radius: 18 18 18 18;
+    -fx-background-radius: 18 18 18 18;
+}
+
+.barraBusqueda .label{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-text-fill: #FDFEFE;  
+}
+
+.labelTituloTabla{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
+    -fx-background-color: #3498DB;
+    -fx-border-radius: 18 18 18 18;
+    -fx-background-radius: 18 18 18 18;
+}
+
+.ClienteEditPane{
+    -fx-background-color: rgba(93, 173, 226, 0.7);
+    -fx-border-radius: 18 18 18 18;
+    -fx-background-radius: 18 18 18 18;
+}
+
+.ClienteEditBotonera{
+    -fx-background-color: rgba(52, 152, 219, 0.7);
+    -fx-border-radius: 0 0 18 18;
+    -fx-background-radius: 0 0 18 18;
+}
+
+.ClienteEditHeader{
+    -fx-background-color: rgba(52, 152, 219, 0.7);
+    -fx-border-radius: 18 18 0 0;
+    -fx-background-radius: 18 18 0 0;
+    -fx-text-fill: whitesmoke;
+    -fx-font-size: 15pt;
+}
+
+.ClienteEditbutton{
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: derive(#D35400,50%);
+    -fx-font-size: 10pt;
+    -fx-background-radius: 18 18 18 18;
+}
+
+.clienteEditCenter{
+    -fx-background-color: rgba(253, 254, 254, 0.7);
+}
+
+.bordesRedondos{
+    -fx-background-radius: 18 18 18 18;
+    -fx-border-radius: 18 18 18 18;
+}
+
+.tipografiaFactura{
+/*    -fx-font-size: 14.5pt; */
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #FDFEFE;  
+    
+}
+
+.img_btn_add{
+    -fx-background-color: derive(#D35400,50%);
+    -fx-background-image: url("resources/mas.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 90% 90%;
+    -fx-background-position: center;
+}
+
+.img_btn_search{
+    -fx-background-color: derive(#D35400,50%);
+    -fx-background-image: url("resources/busqueda.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 80% 80%;
+    -fx-background-position: center;
+}
+
+.img_btn_add2{
+    -fx-background-color: derive(#D35400,50%);
+    -fx-background-image: url("resources/anadir.png");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 80% 80%;
+    -fx-background-position: center;
+}

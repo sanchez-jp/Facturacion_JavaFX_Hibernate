@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-dic-2017 22:08:04 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="badaden04" name="com.sanchezjp.modelo.entities.DetallesFactura" optimistic-lock="version" table="detalles_factura">
+    <composite-id class="com.sanchezjp.modelo.entities.DetallesFacturaId" name="id">
+      <key-property name="numDetalle" type="int">
+        <column name="num_detalle"/>
+      </key-property>
+      <key-property name="factura" type="int">
+        <column name="factura"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="com.sanchezjp.modelo.entities.Articulos" fetch="select" name="articulos">
+      <column name="articulo" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.sanchezjp.modelo.entities.Facturas" fetch="select" insert="false" name="facturas" update="false">
+      <column name="factura" not-null="true"/>
+    </many-to-one>
+    <property name="unidades" type="int">
+      <column name="unidades" not-null="true"/>
+    </property>
+    <property name="precio" type="double">
+      <column name="precio" not-null="true" precision="22" scale="0"/>
+    </property>
+    <property name="descuento" type="java.lang.Integer">
+      <column name="descuento"/>
+    </property>
+    <property name="iva" type="int">
+      <column name="iva" not-null="true"/>
+    </property>
+    <property name="obsoleto" type="string">
+      <column length="6" name="obsoleto" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

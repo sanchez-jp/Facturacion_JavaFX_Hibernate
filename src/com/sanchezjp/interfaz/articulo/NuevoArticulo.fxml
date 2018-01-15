@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="estiloPortada" stylesheets="@../customizations.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanchezjp.interfaz.articulo.NuevoArticuloController">
+   <children>
+      <BorderPane layoutX="23.0" layoutY="21.0" prefHeight="368.0" prefWidth="559.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbLabels" alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="191.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="lbCodigo" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Código de producto" />
+                        <Label fx:id="lbDescripcion" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Descripción">
+                           <VBox.margin>
+                              <Insets bottom="60.0" />
+                           </VBox.margin></Label>
+                        <Label fx:id="lbPrecio" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Precio" />
+                        <Label fx:id="lbStock" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Stock disponible" />
+                        <Label fx:id="lbIva" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Tipo IVA aplicado" />
+                        <Label fx:id="lbDescuento" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Descuento (%)" />
+                     </children>
+                     <padding>
+                        <Insets right="2.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbTextFields" alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="177.0" spacing="6.0">
+                     <children>
+                        <TextField fx:id="tfCodigo" promptText="ej.: MA232P" styleClass="textField" />
+                        <TextArea fx:id="taDescripcion" prefHeight="84.0" prefWidth="149.0" promptText="Añada una descripción corta" styleClass="textField" />
+                        <TextField fx:id="tfPrecio" promptText="ej.: 25.60" styleClass="textField" />
+                        <TextField fx:id="tfStock" promptText="ej.: 389" styleClass="textField" />
+                     </children>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" text="Cancelar" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarArticulo" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" stylesheets="@../customizations.css" text="Guardar" />
+              </buttons>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+      <Label fx:id="lbError" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="433.0" layoutY="6.0" stylesheets="@../customizations.css" text="* NIF incorrecto" visible="false" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+         <styleClass>
+            <String fx:value="labelError" />
+            <String fx:value="responsivePane" />
+         </styleClass>
+      </Label>
+   </children>
+</AnchorPane>

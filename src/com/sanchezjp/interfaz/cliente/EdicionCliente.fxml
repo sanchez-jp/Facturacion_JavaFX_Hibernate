@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="panelEdicion" prefHeight="400.0" prefWidth="364.0" styleClass="ClienteEditPane" stylesheets="@../customizations.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sanchezjp.interfaz.cliente.EdicionClienteController">
+   <children>
+      <BorderPane layoutX="82.0" layoutY="100.0" prefHeight="400.0" prefWidth="364.0" styleClass="bordesRedondos" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="clienteEditCenter" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbLabels" alignment="CENTER_LEFT" prefHeight="328.0" prefWidth="141.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="lbNombre" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Nombre" />
+                        <Label fx:id="lbAp1" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Apellido 1" />
+                        <Label fx:id="lbAp2" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Apellido 2" />
+                        <Label fx:id="lbNif" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="NIF" />
+                        <Label fx:id="lbRSocial" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Razón Social" />
+                        <Label fx:id="lbDescuento" styleClass="tipografiaForm" stylesheets="@../customizations.css" text="Descuento (%)" />
+                     </children>
+                     <padding>
+                        <Insets right="2.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbTextFields" alignment="CENTER_LEFT" prefHeight="368.0" prefWidth="135.0" spacing="6.0">
+                     <children>
+                        <TextField fx:id="tfNombre" styleClass="textField" stylesheets="@../customizations.css" />
+                        <TextField fx:id="tfAp1" styleClass="textField" stylesheets="@../customizations.css" />
+                        <TextField fx:id="tfAp2" styleClass="textField" stylesheets="@../customizations.css" />
+                        <TextField fx:id="tfNif" styleClass="textField" stylesheets="@../customizations.css" />
+                        <TextField fx:id="tfRSocial" styleClass="textField" stylesheets="@../customizations.css" />
+                     </children>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+          <bottom>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" styleClass="ClienteEditBotonera" BorderPane.alignment="CENTER">
+              <buttons>
+                <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#goToCancelar" styleClass="ClienteEditbutton" text="Cancelar" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#goToGuardar" styleClass="ClienteEditbutton" text="Guardar" />
+              </buttons>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets right="6.0" />
+               </padding>
+            </ButtonBar>
+         </bottom>
+         <top>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="364.0" text="Editor de cliente" BorderPane.alignment="CENTER">
+               <styleClass>
+                  <String fx:value="ClienteEditHeader" />
+                  <String fx:value="labelTituloTabla" />
+               </styleClass>
+            </Label>
+         </top>
+      </BorderPane>
+      <Label fx:id="lbError" alignment="CENTER" contentDisplay="BOTTOM" layoutY="305.0" prefHeight="55.0" prefWidth="364.0" styleClass="labelError" text="Label" textAlignment="CENTER" visible="false" />
+   </children>
+</AnchorPane>
