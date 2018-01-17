@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS detalles_factura(
 
 /* Inserción de tuplas en la tabla clientes */
 INSERT INTO `clientes` (`id`, `nif`, `nombre`, `apellido1`, `apellido2`, `razon_social`, `descuento`, `obsoleto`) 
-VALUES (NULL, '08894832L', 'Víctor Alfonso', 'Saavedra', 'Caldera', 'ALUMASA S.A.', '10', 'NO'), 
+VALUES  (NULL, '08894832L', 'Víctor Alfonso', 'Saavedra', 'Caldera', 'ALUMASA S.A.', '10', 'NO'), 
 	(NULL, '80063598T', 'Juan Pedro', 'Sánchez', 'Álvarez', 'INDRA', '20', 'NO'), 
         (NULL, '91992228W', 'Luís', 'Ortíz', 'Moreno', 'L&C Soluciones', '0', 'NO'), 
         (NULL, '05534591D', 'Jesús', 'Romano', 'Barril', 'Romano Electricidad', '8', 'YES'), 
@@ -81,3 +81,16 @@ VALUES (NULL, '08894832L', 'Víctor Alfonso', 'Saavedra', 'Caldera', 'ALUMASA S.
         (NULL, '86420667F', 'Dimas', 'De La Fuente', 'Peralta', 'Línea D4', '10', 'NO'), 
         (NULL, '71372750R', 'Gustavo', 'Fring', '', 'Los Pollos Hermanos', '21', 'NO'), 
         (NULL, '75817693X', 'Juan', 'Sánchez', 'Aguilera', 'Panadería Aguilera', '21', 'YES');
+
+/* Inserción de tuplas en la tabla artículos */
+INSERT INTO `articulos` (`id`, `cod_articulo`, `descripcion`, `precio`, `stock`, `iva`, `descuento`, `obsoleto`) 
+VALUES  (NULL, 'A01ACADT', 'Artículo de prueba 11', '15.60', '100', '21', '10', 'NO'), 
+        (NULL, 'A02ACADT', 'Artículo de prueba 12', '35.70', '45', '21', '0', 'NO'), 
+        (NULL, 'A03ACADT', 'Artículo de prueba 3', '12.60', '600', '21', '0', 'NO'), 
+        (NULL, 'A04ACADT', 'Artículo de prueba 4', '6', '500', '21', '12', 'NO'), 
+        (NULL, 'A05ACADT', 'Artículo de prueba 5', '150.50', '0', '21', '10', 'YES'), 
+        (NULL, 'A06ACADT', 'Artículo de prueba 6', '50', '0', '21', '5', 'YES'), 
+        (NULL, 'A07ACADT', 'Artículo de prueba 7', '0.80', '120', '21', '0', 'NO'), 
+        (NULL, 'A08ACADT', 'Artículo de prueba 8', '70.20', '0', '21', '10', 'YES'), 
+        (NULL, 'A09ACADT', 'Artículo de prueba 9', '12.60', '0', '21', '0', 'YES'), 
+        (NULL, 'A10ACADT', 'Artículo de prueba 10', '20.30', '10', '21', '5', 'NO');
