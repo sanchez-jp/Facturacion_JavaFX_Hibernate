@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 27-dic-2017 22:08:04 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="badaden04" name="com.sanchezjp.modelo.entities.DetallesFactura" optimistic-lock="version" table="detalles_factura">
+  <class catalog="facturacion" name="com.sanchezjp.modelo.entities.DetallesFactura" optimistic-lock="version" table="detalles_factura">
     <composite-id class="com.sanchezjp.modelo.entities.DetallesFacturaId" name="id">
       <key-property name="numDetalle" type="int">
         <column name="num_detalle"/>

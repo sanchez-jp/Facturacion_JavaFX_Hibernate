@@ -66,3 +66,18 @@ CREATE TABLE IF NOT EXISTS detalles_factura(
   FOREIGN KEY (articulo) REFERENCES articulos (id),
   PRIMARY KEY (num_detalle, factura)
 );
+
+/* Inserción de tuplas en la tabla clientes */
+INSERT INTO `clientes` (`id`, `nif`, `nombre`, `apellido1`, `apellido2`, `razon_social`, `descuento`, `obsoleto`) 
+VALUES (NULL, '08894832L', 'Víctor Alfonso', 'Saavedra', 'Caldera', 'ALUMASA S.A.', '10', 'NO'), 
+	(NULL, '80063598T', 'Juan Pedro', 'Sánchez', 'Álvarez', 'INDRA', '20', 'NO'), 
+        (NULL, '91992228W', 'Luís', 'Ortíz', 'Moreno', 'L&C Soluciones', '0', 'NO'), 
+        (NULL, '05534591D', 'Jesús', 'Romano', 'Barril', 'Romano Electricidad', '8', 'YES'), 
+        (NULL, '49427889S', 'Ana', 'Rodríguez', 'Trejo', 'Zapatú', '10', 'NO'), 
+        (NULL, '36699372C', 'Marisa', 'Rosales', 'Guzmán', 'IDEA MONTIJO', '8', 'NO'), 
+        (NULL, '86569025S', 'Isabel', 'Letellez', 'Martín', 'Toledana de aceros', '15', 'NO'), 
+        (NULL, '65931297A', 'Jaime', 'Borromeo', 'Sanchidrián', 'Academia Jaimito', '0', 'YES'), 
+        (NULL, '01837822F', 'Susana', 'Díaz', 'Díaz', 'IberTech', '15', 'NO'), 
+        (NULL, '86420667F', 'Dimas', 'De La Fuente', 'Peralta', 'Línea D4', '10', 'NO'), 
+        (NULL, '71372750R', 'Gustavo', 'Fring', '', 'Los Pollos Hermanos', '21', 'NO'), 
+        (NULL, '75817693X', 'Juan', 'Sánchez', 'Aguilera', 'Panadería Aguilera', '21', 'YES');
