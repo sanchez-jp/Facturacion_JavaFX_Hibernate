@@ -267,3 +267,15 @@ and open the template in the editor.
     -fx-background-size: 80% 80%;
     -fx-background-position: center;
 }
+
+.textFieldTotalesFactura{
+    -fx-border-color: derive(#D35400,50%);
+    -fx-border-radius: 8 8 8 8;
+    -fx-background-color: rgba(253, 254, 254, 0.5);
+    -fx-background-radius: 8 8 8 8;
+    
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    -fx-font-size: 10pt;
+    -fx-text-fill: black;  
+}

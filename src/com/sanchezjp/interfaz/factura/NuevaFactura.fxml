@@ -22,7 +22,7 @@
             <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <buttons>
                 <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" text="Cancelar" />
-                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarCliente" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" stylesheets="@../customizations.css" text="Guardar" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarFactura" prefHeight="26.0" prefWidth="83.0" styleClass="button_generic" stylesheets="@../customizations.css" text="Guardar" />
               </buttons>
             </ButtonBar>
          </bottom>
@@ -43,7 +43,7 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
                            <children>
                               <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="CLIENTE" />
-                              <TextField fx:id="tfCliente" minHeight="-Infinity" minWidth="-Infinity" promptText="NIF del cliente" styleClass="textField" />
+                              <TextField fx:id="tfCliente" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="85.0" promptText="NIF Cliente" styleClass="textField" />
                               <Button fx:id="btnBuscar" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#goToListaClientes" prefHeight="26.0" prefWidth="26.0" styleClass="img_btn_search" />
                               <Button fx:id="btnAdd" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#goToNuevoCliente" prefHeight="26.0" prefWidth="26.0" styleClass="img_btn_add" />
                            </children>
@@ -74,7 +74,7 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="2.0" GridPane.rowIndex="2">
                      <children>
                         <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="CALLE" />
-                        <TextField fx:id="tfCalle" minHeight="-Infinity" minWidth="-Infinity" promptText="Nombre de la calle" styleClass="textField" />
+                        <TextField fx:id="tfCalle" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="263.0" promptText="Nombre de la calle" styleClass="textField" />
                         <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="Nº">
                            <HBox.margin>
                               <Insets left="10.0" />
@@ -120,17 +120,17 @@
             </GridPane>
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="textField" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" styleClass="textField" BorderPane.alignment="CENTER">
                <children>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn prefWidth="98.0" text="Cod. Artículo" />
-                        <TableColumn prefWidth="98.0" text="Descripción" />
-                      <TableColumn prefWidth="75.0" text="Unidades" />
-                        <TableColumn prefWidth="107.0" text="Precio Unitario" />
-                        <TableColumn prefWidth="87.0" text="Descuento" />
-                        <TableColumn minWidth="4.0" prefWidth="93.0" text="IVA aplicado" />
-                        <TableColumn prefWidth="75.0" text="Importe" />
+                      <TableColumn fx:id="tcCodArt" prefWidth="98.0" text="Cod. Artículo" />
+                        <TableColumn fx:id="tcDescripción" prefWidth="98.0" text="Descripción" />
+                      <TableColumn fx:id="tcUnidades" prefWidth="75.0" text="Unidades" />
+                        <TableColumn fx:id="tcPrecioUnitario" prefWidth="107.0" text="Precio Unitario" />
+                        <TableColumn fx:id="tcDescuento" prefWidth="87.0" text="Descuento" />
+                        <TableColumn fx:id="tcIva" minWidth="4.0" prefWidth="93.0" text="IVA aplicado" />
+                        <TableColumn fx:id="tcImporte" prefWidth="75.0" text="Importe" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -139,24 +139,24 @@
                   <HBox alignment="CENTER_RIGHT" layoutX="16.0" layoutY="195.0" prefHeight="36.0" prefWidth="692.0">
                      <children>
                         <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="Base Imponible " />
-                        <TextField fx:id="tfTotal11" minHeight="-Infinity" minWidth="-Infinity" promptText="0000.00 €" styleClass="textField" />
+                        <TextField fx:id="tfBaseImp" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="0000.00 €" styleClass="textFieldTotalesFactura" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" layoutX="16.0" layoutY="216.0" prefHeight="36.0" prefWidth="692.0">
                      <children>
                         <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="IVA " />
-                        <TextField fx:id="tfTotal1" minHeight="-Infinity" minWidth="-Infinity" promptText="0000.00 €" styleClass="textField" />
+                        <TextField fx:id="tfIva" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="0000.00 €" styleClass="textFieldTotalesFactura" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="692.0">
                      <children>
                         <Label minHeight="-Infinity" minWidth="-Infinity" styleClass="tipografiaFactura" text="TOTAL FACTURA " />
-                        <TextField fx:id="tfTotal" minHeight="-Infinity" minWidth="-Infinity" promptText="0000.00 €" styleClass="textField" />
+                        <TextField fx:id="tfTotal" editable="false" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="0000.00 €" styleClass="textFieldTotalesFactura" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="26.0" prefWidth="704.0">
                      <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0" styleClass="img_btn_add2" />
+                        <Button fx:id="btnNuevaLinea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addRow" prefHeight="26.0" prefWidth="26.0" styleClass="img_btn_add2" />
                      </children>
                   </HBox>
                </children>
